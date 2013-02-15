@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="UTF-8">
+        <title>Pricing Table</title>
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="stylesheet" href="stylesheets/ch.css">
+        <link rel="stylesheet" href="stylesheets/prettyPhoto.css"
+              type="text/css" media="screen, projection">
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="javascripts/html5shiv.js"></script>
+        <![endif]-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+              rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/camera.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/js_composer_front.css" type="text/css" media="screen, projection">
+        <link rel='stylesheet' id='layerslider_css-css'  href='stylesheets/layerslider.css?ver=3.0.0' type='text/css' media='all'>
+        <link rel='stylesheet' id='flexslider-css'  href='flexslider/flexslider.css?ver=3.4.7' type='text/css' media='screen'>
+        <link rel='stylesheet' id='bootstrap-css'  href='stylesheets/bootstrap.css?ver=3.4.7' type='text/css' media='screen'>         
+		<link rel="stylesheet" href="stylesheets/wide.css">
+        <!-- 111 -->
+        <script type='text/javascript' src='javascripts/jquery-1.7.2.min.js?ver=1.7.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.mobile.customized.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.easing.1.3.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.transition.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/camera.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.prettyPhoto.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.backgroundpos.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jFlyup.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/main.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.scrollTo-min.js?ver=3.4.2'></script>
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                jQuery('a.content-top-button').click(function (e) {
+                    e.preventDefault();
+                    jQuery.scrollTo('#top', {
+                        duration: 500
+                    });
+                });
+                $("#applications  a.view,#secondary-thumbs a.view").each(function () {
+                    if ($(this).hasClass("view_video")) {
+                        try {
+                            var id = this.href.split("#")[1];
+                            var width = parseInt($("#" + id).find("iframe").attr("width"));
+                            var height = parseInt($("#" + id).find("iframe").attr("height"));
+                            $(this).attr("rel", "").prettyPhoto({
+                                default_width: width,
+                                default_height: height
+                            });
+                        } catch (e) {
+                        }
+                    } else if ($(this).hasClass("view_gallery")) {
+                        $("a[rel='" + this.rel + "']").prettyPhoto();
+                    } else {
+                        $(this).prettyPhoto({
+                            keyboard_shortcuts: false
+                        });
+                    }
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="stylesheets/ig_main.css">
+        <link rel="stylesheet" href="stylesheets/ch001.css">
+        <link rel="stylesheet" href="stylesheets/media.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300,100'
+              rel='stylesheet' type='text/css'>
+    </head>
+    <body class="page page-id-1882 page-child parent-pageid-1253 page-template page-template-slider-PageTemplate1-php wpb-js-composer js-comp-ver-3.4.7" style="background-repeat: repeat;background-position:left top;background-attachment:fixed;background-image:url(images/SeattleNight-Grey.jpg);">
+        <div id="full-width">
+            <header>
+                <div id="header">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="http://placehold.it/132x97" alt="Logo">
+                            <h2>Clean Corporate Theme</h2>
+                        </a>
+                    </div>
+                    <nav id="main-nav">
+                        <div id="drop-down-nav">
+                            <ul>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="index.html">Home <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Homepage_Example_1.html">Homepage Example 1</a></li>
+                                        <li><a href="Homepage_Example_2.html">Homepage Example 2</a></li>
+                                        <li><a href="Homepage_Example_3.html">Homepage Example 3</a></li>
+                                        <li><a href="Homepage_Example_4.html">Homepage Example 4</a></li>
+                                        <li><a href="Homepage_Example_5.html">Homepage Example 5</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Blog.html">Blog <span></span></a>
+                                    <ul>
+                                        <li><a href="Blog_Template_1.html">Blog Template 1</a></li>
+                                        <li><a href="Blog_Template_2.html">Blog Template 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Sliders.html">Sliders <span></span></a>
+                                    <ul>
+                                        <li><a href="Layer_Slider.html">Layer Slider</a></li>
+                                        <li><a href="One_By_One_Slider.html">One By One Slider</a></li>
+                                        <li><a href="Camera_Slider.html">Camera Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Pages.html">Pages <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Video_Page_Template.html">Video Page Template</a></li>
+                                        <li><a href="Services.html">Services</a></li>
+                                        <li><a href="FAQ.html">FAQ</a></li>
+                                        <li><a href="Our_Team.html">Our Team</a></li>
+                                        <li><a href="Page_with_Left_Sidebar.html">Page with Left Sidebar</a></li>
+                                        <li><a href="Page_with_Right_Sidebar.html">Page with Right Sidebar</a></li>
+                                        <li><a href="Embed_Video.html">Embed Video</a></li>
+                                        <li><a href="Full_Width_Page.html">Full Width Page</a></li>
+                                        <li><a href="Pricing_Page.html">Pricing Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Portfolio.html">Portfolio <span></span></a>
+                                    <ul>
+                                        <li><a href="Portfolio_2_Column.html">Portfolio 2 Column</a></li>
+                                        <li><a href="Portfolio_3_Column.html">Portfolio 3 Column</a></li>
+                                        <li><a href="Portfolio_4_Column.html">Portfolio 4 Column</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Shortcodes.html">Shortcodes <span></span></a>
+                                    <ul>
+                                        <li><a href="Price_Tables.html">Price Tables</a></li>
+                                        <li><a href="Testimonials.html">Testimonials</a></li>
+                                        <li><a href="Columns.html">Columns</a></li>
+                                        <li><a href="Accordion_Tabs.html">Accordion &amp; Tabs</a></li>
+                                        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="sub-parent " href="Contacts.html">Contacts <span></span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+            </header>
+            <div id="main-container" class="intro">
+                <div id="breadcrumb-bar-wide">
+					<div id="breadcrumb-bar">
+						<div id="breadcrumb"><a href="#">Home</a> <b>&gt;</b> <a href="#">Pages</a> <b>&gt;</b> <span class="current"> Pricing Table</span></div>
+						<div class="socials">
+							<a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+							<a class="twitter" target="_blank" href="http://twitter.com" title=""></a>					
+							<a class="youtube" target="_blank" href="http://youtube.com" title=""></a>				
+						</div>
+					</div>
+                </div>
+                <div class="clear"></div>
+                <div id="search">
+                    <form role="search" method="get" id="searchform" action="#">
+                        <input type="text" style="color:#000000; opacity:0.5;" placeholder="Looking for something?" value="" name="s">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <h1 id="title" class="dark ">
+                    <span>
+                        Pricing Table			
+                    </span>
+                </h1>
+                <div class="clear"></div>
+            </div>
+            <div role="main">
+                <section>
+                    <section class="page-content" style="width:100%">
+                        <div id="buy-now-box"><a target="_self" title="Are You Interested?" href="www.google.com" class="large custom-button align-btn-right"><span>buy now!</span></a>
+                            <h2 class="blue">Are You Interested?</h2>
+                            <p>Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien.</p>
+                        </div>
+                        <h3 style="padding-top: 30px; color: #3781b7;">PRICING TABLES 4 COLUMNS</h3>
+                        <div class="divider"></div><hr class="line">
+                        <section class="extended-pricing-table col4 featured clearfix"><div class="column features-list "><div class="header"></div><!-- end .header --><ul class="features"><li data-tooltip="Tooltip - Optional description can go here!">Users</li><li data-tooltip="Tooltip - Optional description can go here!">Voters &amp; votes</li><li data-tooltip="Tooltip - Optional description can go here!">Ideas</li><li data-tooltip="Tooltip - Optional description can go here!">Comments</li><li data-tooltip="Tooltip - Optional description can go here!">Moderation tools</li><li data-tooltip="Tooltip - Optional description can go here!">Sign-in / singup options</li><li data-tooltip="Tooltip - Optional description can go here!">Widget tracking</li><li data-tooltip="Tooltip - Optional description can go here!">Admins / moderators</li><li data-tooltip="Tooltip - Optional description can go here!">Feedback zones</li><li data-tooltip="Tooltip - Optional description can go here!">Products</li><li data-tooltip="Tooltip - Optional description can go here!">Private forums</li><li data-tooltip="Tooltip - Optional description can go here!">Semi-private forums</li><li data-tooltip="Tooltip - Optional description can go here!">Public forums</li><li data-tooltip="Tooltip - Optional description can go here!">Domain aliasing</li><li data-tooltip="Tooltip - Optional description can go here!">30 day trial</li></ul><!-- end .features --></div><!-- end .column -->
+                            <div class="column  free"><div class="header"><h2 class="title">Free Plan</h2><h3 class="price"><span class="price-value">$0</span><span class="price-period">per month</span></h3></div><!-- end .header --><ul class="features"><li data-feature="Users">50</li><li data-feature="Voters &amp; votes">unlimited</li><li data-feature="Ideas">unlimited</li><li data-feature="Comments"><span class="uncheck">—</span></li><li data-feature="Moderation tools"><span class="check">?</span></li><li data-feature="Sign-in / singup options"><span class="check">?</span></li><li data-feature="Widget tracking"><span class="check">?</span></li><li data-feature="Admins / moderators"><span class="uncheck">—</span></li><li data-feature="Feedback zones"><span class="uncheck">—</span></li><li data-feature="Products"><span class="uncheck">—</span></li><li data-feature="Private forums"><span class="check">?</span></li><li data-feature="Semi-private forums"><span class="check">?</span></li><li data-feature="Public forums"><span class="uncheck">—</span></li><li data-feature="Domain aliasing"><span class="uncheck">—</span></li><li data-feature="30 day trial"><span class="check">?</span></li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Check It For Free</a></div><!-- end .footer --></div><!-- end .column -->
+                            <div class="column  "><div class="header"><h2 class="title">Mini</h2><h3 class="price"><span class="price-value">$15</span><span class="price-period">per month</span></h3></div><!-- end .header --><ul class="features"><li data-feature="Users">200</li><li data-feature="Voters &amp; votes">unlimited</li><li data-feature="Ideas">unlimited</li><li data-feature="Comments"><span class="check">?</span></li><li data-feature="Moderation tools"><span class="check">?</span></li><li data-feature="Sign-in / singup options"><span class="check">?</span></li><li data-feature="Widget tracking"><span class="check">?</span></li><li data-feature="Admins / moderators">unlimited</li><li data-feature="Feedback zones">unlimited</li><li data-feature="Products">unlimited</li><li data-feature="Private forums"><span class="check">?</span></li><li data-feature="Semi-private forums"><span class="check">?</span></li><li data-feature="Public forums"><span class="check">?</span></li><li data-feature="Domain aliasing"><span class="check">?</span></li><li data-feature="30 day trial"><span class="check">?</span></li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column -->
+                            <div class="column  featured"><div class="header"><h2 class="title">Medium</h2><h3 class="price"><span class="price-value">$25</span><span class="price-period">per month</span></h3></div><!-- end .header --><ul class="features"><li data-feature="Users">1000</li><li data-feature="Voters &amp; votes">unlimited</li><li data-feature="Ideas">unlimited</li><li data-feature="Comments"><span class="check">?</span></li><li data-feature="Moderation tools"><span class="check">?</span></li><li data-feature="Sign-in / singup options"><span class="check">?</span></li><li data-feature="Widget tracking"><span class="check">?</span></li><li data-feature="Admins / moderators">unlimited</li><li data-feature="Feedback zones">unlimited</li><li data-feature="Products">unlimited</li><li data-feature="Private forums"><span class="check">?</span></li><li data-feature="Semi-private forums"><span class="check">?</span></li><li data-feature="Public forums"><span class="check">?</span></li><li data-feature="Domain aliasing"><span class="check">?</span></li><li data-feature="30 day trial"><span class="check">?</span></li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column -->
+                            <div class="column  "><div class="header"><h2 class="title">Professional</h2><h3 class="price"><span class="price-value">$37</span><span class="price-period">per month</span></h3></div><!-- end .header --><ul class="features"><li data-feature="Users">3000</li><li data-feature="Voters &amp; votes">unlimited</li><li data-feature="Ideas">unlimited</li><li data-feature="Comments"><span class="check">?</span></li><li data-feature="Moderation tools"><span class="check">?</span></li><li data-feature="Sign-in / singup options"><span class="check">?</span></li><li data-feature="Widget tracking"><span class="check">?</span></li><li data-feature="Admins / moderators">unlimited</li><li data-feature="Feedback zones">unlimited</li><li data-feature="Products">unlimited</li><li data-feature="Private forums"><span class="check">?</span></li><li data-feature="Semi-private forums"><span class="check">?</span></li><li data-feature="Public forums"><span class="check">?</span></li><li data-feature="Domain aliasing"><span class="check">?</span></li><li data-feature="30 day trial"><span class="check">?</span></li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column --></section><!-- end pricing-table -->
+                        <div class="clear"></div>
+                        <div style="margin-top: 100px;">
+                            <section class="simple-pricing-table col5 featured clearfix"><div class="column  free"><div class="header"><h2 class="title">Free Plan</h2><h3 class="price"><span class="price-value"><span>$</span>0<span>00</span></span><span class="price-period">per month</span></h3><h5 class="description">Free Plan</h5></div><!-- end .header --><ul class="features"><li><span class="check">?</span>Up to 50 users</li><li><span class="check">?</span>Limited voters &amp; votes</li><li><span class="check">?</span>Limited ideas, comments</li><li><span class="check">?</span>Moderation tools</li><li><span class="check">?</span>Multiple sign-in options</li><li><span class="check">?</span>Widget tracking</li><li><span class="uncheck">—</span>Admins / moderators</li><li><span class="uncheck">—</span>1 feedback zone</li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Check It For Free</a></div><!-- end .footer --></div><!-- end .column -->
+                                <div class="column  "><div class="header"><h2 class="title">Mini</h2><h3 class="price"><span class="price-value"><span>$</span>17<span>99</span></span><span class="price-period">per month</span></h3><h5 class="description">Best for any freelancer</h5></div><!-- end .header --><ul class="features"><li><span class="check">?</span>Up to 200 users</li><li><span class="check">?</span>Limited voters &amp; votes</li><li><span class="check">?</span>Limited ideas, comments</li><li><span class="check">?</span>Moderation tools</li><li><span class="check">?</span>Multiple sign-in options</li><li><span class="check">?</span>Widget tracking</li><li><span class="uncheck">—</span>Admins / moderators</li><li><span class="uncheck">—</span>1 feedback zone</li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column -->
+                                <div class="column  featured"><span class="discount">35%</span><div class="header"><h2 class="title">Medium</h2><h3 class="price"><span class="price-value"><span>$</span>15<span>99</span></span><span class="price-period">per month</span></h3><h5 class="description">Most Popular Plan</h5></div><!-- end .header --><ul class="features"><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Up to 1000 users</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Limited voters &amp; votes</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Limited ideas, comments</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Moderation tools</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Multiple sign-in options</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="check">?</span>Widget tracking</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="uncheck">—</span>Admins / moderators</li><li data-tooltip="Tooltip - Optional description of the feature can go here!"><span class="uncheck">—</span>Unlimited feedback zone</li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column -->
+                                <div class="column  "><div class="header"><h2 class="title">Professional</h2><h3 class="price"><span class="price-value"><span>$</span>25<span>99</span></span><span class="price-period">per month</span></h3><h5 class="description">Best for corporate teams</h5></div><!-- end .header --><ul class="features"><li><span class="check">?</span>Up to 3000 users</li><li><span class="check">?</span>Unlimited voters &amp; votes</li><li><span class="check">?</span>Unlimited comments</li><li><span class="check">?</span>Moderation tools</li><li><span class="check">?</span>Multiple sign-in options</li><li><span class="check">?</span>Widget tracking</li><li><span class="check">?</span>Admins / moderators</li><li><span class="uncheck">—</span>Unlimited feedback zone</li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column -->
+                                <div class="column  "><div class="header"><h2 class="title">Unlimited</h2><h3 class="price"><span class="price-value"><span>$</span>45<span>99</span></span><span class="price-period">per month</span></h3><h5 class="description">Contact us for all unlimited plans</h5></div><!-- end .header --><ul class="features"><li><span class="check">?</span>Choose yourself</li><li><span class="check">?</span>Unlimited voters &amp; votes</li><li><span class="check">?</span>Unlimited comments</li><li><span class="check">?</span>Moderation tools</li><li><span class="check">?</span>Multiple sign-in options</li><li><span class="check">?</span>Widget tracking</li><li><span class="check">?</span>Admins / moderators</li><li><span class="check">?</span>Unlimited feedback zone</li></ul><!-- end .features --><div class="footer"><a class="button" href="#">Sign Up</a></div><!-- end .footer --></div><!-- end .column --></section><!-- end pricing-table -->
+                            <div class="divider"></div><hr class="line">
+                            <h3 style="padding-top: 30px; color: #3781b7;">LISTS</h3>
+                            <div class="divider"></div><hr class="line">
+                            <div class="one_third">
+                                <div class="price-list">
+                                    <ul>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$10.00</div></li>
+                                        <li><div class="left">Aenean nisl orci</div><div class="right">$16.99</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$17.95</div></li>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$12.00</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$11.99</div></li>
+                                    </ul>
+                                </div>
+                            </div><div class="one_third">
+                                <div class="price-list">
+                                    <ul>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$10.00</div></li>
+                                        <li><div class="left">Aenean nisl orci</div><div class="right">$16.99</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$17.95</div></li>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$12.00</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$11.99</div></li>
+                                    </ul>
+                                </div>
+                            </div><div class="one_third last">
+                                <div class="price-list">
+                                    <ul>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$10.00</div></li>
+                                        <li><div class="left">Aenean nisl orci</div><div class="right">$16.99</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$17.95</div></li>
+                                        <li><div class="left">Consectetur adipiscing</div><div class="right">$12.00</div></li>
+                                        <li><div class="left">Lorem ipsum dolor</div><div class="right">$11.99</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div style="margin-bottom: 100px;"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </section>
+                <div class="clear"></div>
+            </div>
+            <div>
+                <div class="footer"></div>
+                <div class="clear"></div>
+                <footer>
+                    <div class="footer">
+                        <div id="logo-bottom">
+                            <div class="textwidget">
+                                <img src="http://placehold.it/144x153" alt="Logo">
+                            </div>
+                        </div>
+                        <div id="footer-container">
+                            <div class="footer-cell">
+                                <h2>Latest Posts</h2> 
+                                <p><b><a href="#" title="Mirum est notare">Mirum est notare</a></b>
+                                </p>
+                                <p><b>November 18, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                                <div class="hr"></div>
+                                <p><b><a href="#" title="Claritas est etiam">Claritas est etiam</a></b>
+                                </p>
+                                <p><b>November 15, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>tweets<a id="twit" title="" href="https://twitter.com/TheNextWeb">follow</a></h2>
+                                <div class="twitter-list">
+                                    <ul class="tweet_list">
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">Social trading: DCM Dealer uses Twitter and Facebook sentiment to help traders make investment decisions <a href="http://t.co/P8fQcWh5">http://t.co/P8fQcWh5</a> by <a href="http://twitter.com/MartinSFP">@MartinSFP</a></span>
+                                            <div class="hr"></div><span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">The NRA launches a target-practice shooting app on iOS...for ages 4+ <a href="http://t.co/Xuz3vXik">http://t.co/Xuz3vXik</a> by <a href="http://twitter.com/nisummers">@nisummers</a></span> 
+                                            <span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>Contacts</h2>	
+                                <div class="textwidget">
+                                    <p>The Company Name Inc.
+                                        <br>8901 Marmora Road,
+                                        <br>Glasgow, D04 89GR.</p>
+                                    <p class="footer-last">+1 800 559 6580</p>
+                                    <p class="footer-last">+1 800 603 6035</p>
+                                    <p class="footer-last">
+                                        <a class="e-mail" href="#" title="">mail@companyname.com</a>
+                                    </p>
+                                </div>
+                                <div class="socials">
+                                    <a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+                                    <a class="twitter" target="_blank" href="http://twitter.com" title=""></a>
+                                    <a class="youtube" target="_blank" href="http://youtube.com" title=""></a>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="copy">&copy; 2012 Novus. All Rights Reserved</div>
+                        <div class="clear"></div>
+                    </div>
+                </footer>
+            </div>
+            <a href="#top" class="gotop" id="top-link"><img src="images/gotop.png" alt="Go Top"/></a>
+            <!--script type="text/javascript" src="javascripts/retina.js"></script-->
+        </div>
+        <script type='text/javascript' src='LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.0.0'></script>
+        <script type='text/javascript' src='LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+        <script type='text/javascript' src='flexslider/jquery.flexslider-min.js?ver=3.4.7'></script>
+    </body>
+</html>

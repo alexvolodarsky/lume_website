@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="UTF-8">
+        <title>Accordion & Tabs</title>
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="stylesheet" href="stylesheets/ch.css">
+        <link rel="stylesheet" href="stylesheets/prettyPhoto.css"
+              type="text/css" media="screen, projection">
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="javascripts/html5shiv.js"></script>
+        <![endif]-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+              rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/camera.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/js_composer_front.css" type="text/css" media="screen, projection">
+        <link rel='stylesheet' id='layerslider_css-css'  href='stylesheets/layerslider.css?ver=3.0.0' type='text/css' media='all'>
+        <link rel='stylesheet' id='flexslider-css'  href='flexslider/flexslider.css?ver=3.4.7' type='text/css' media='screen'>
+        <link rel='stylesheet' id='bootstrap-css'  href='stylesheets/bootstrap.css?ver=3.4.7' type='text/css' media='screen'>
+		<link rel="stylesheet" href="stylesheets/wide.css">
+		<!-- 111 -->
+        <script type='text/javascript' src='javascripts/jquery-1.7.2.min.js?ver=1.7.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.mobile.customized.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.easing.1.3.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.transition.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/camera.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.prettyPhoto.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.backgroundpos.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jFlyup.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/main.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.scrollTo-min.js?ver=3.4.2'></script>
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                jQuery('a.content-top-button').click(function (e) {
+                    e.preventDefault();
+                    jQuery.scrollTo('#top', {
+                        duration: 500
+                    });
+                });
+                $("#applications  a.view,#secondary-thumbs a.view").each(function () {
+                    if ($(this).hasClass("view_video")) {
+                        try {
+                            var id = this.href.split("#")[1];
+                            var width = parseInt($("#" + id).find("iframe").attr("width"));
+                            var height = parseInt($("#" + id).find("iframe").attr("height"));
+                            $(this).attr("rel", "").prettyPhoto({
+                                default_width: width,
+                                default_height: height
+                            });
+                        } catch (e) {
+                        }
+                    } else if ($(this).hasClass("view_gallery")) {
+                        $("a[rel='" + this.rel + "']").prettyPhoto();
+                    } else {
+                        $(this).prettyPhoto({
+                            keyboard_shortcuts: false
+                        });
+                    }
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="stylesheets/ig_main.css">
+        <link rel="stylesheet" href="stylesheets/ch001.css">
+        <link rel="stylesheet" href="stylesheets/media.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300,100' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="full-width">
+            <header>
+                <div id="header">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="http://placehold.it/132x97" alt="Logo">
+                            <h2>Clean Corporate Theme</h2>
+                        </a>
+                    </div>
+                    <nav id="main-nav">
+                        <div id="drop-down-nav">
+                            <ul>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="index.html">Home <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Homepage_Example_1.html">Homepage Example 1</a></li>
+                                        <li><a href="Homepage_Example_2.html">Homepage Example 2</a></li>
+                                        <li><a href="Homepage_Example_3.html">Homepage Example 3</a></li>
+                                        <li><a href="Homepage_Example_4.html">Homepage Example 4</a></li>
+                                        <li><a href="Homepage_Example_5.html">Homepage Example 5</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Blog.html">Blog <span></span></a>
+                                    <ul>
+                                        <li><a href="Blog_Template_1.html">Blog Template 1</a></li>
+                                        <li><a href="Blog_Template_2.html">Blog Template 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Sliders.html">Sliders <span></span></a>
+                                    <ul>
+                                        <li><a href="Layer_Slider.html">Layer Slider</a></li>
+                                        <li><a href="One_By_One_Slider.html">One By One Slider</a></li>
+                                        <li><a href="Camera_Slider.html">Camera Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Pages.html">Pages <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Video_Page_Template.html">Video Page Template</a></li>
+                                        <li><a href="Services.html">Services</a></li>
+                                        <li><a href="FAQ.html">FAQ</a></li>
+                                        <li><a href="Our_Team.html">Our Team</a></li>
+                                        <li><a href="Page_with_Left_Sidebar.html">Page with Left Sidebar</a></li>
+                                        <li><a href="Page_with_Right_Sidebar.html">Page with Right Sidebar</a></li>
+                                        <li><a href="Embed_Video.html">Embed Video</a></li>
+                                        <li><a href="Full_Width_Page.html">Full Width Page</a></li>
+                                        <li><a href="Pricing_Page.html">Pricing Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Portfolio.html">Portfolio <span></span></a>
+                                    <ul>
+                                        <li><a href="Portfolio_2_Column.html">Portfolio 2 Column</a></li>
+                                        <li><a href="Portfolio_3_Column.html">Portfolio 3 Column</a></li>
+                                        <li><a href="Portfolio_4_Column.html">Portfolio 4 Column</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Shortcodes.html">Shortcodes <span></span></a>
+                                    <ul>
+                                        <li><a href="Price_Tables.html">Price Tables</a></li>
+                                        <li><a href="Testimonials.html">Testimonials</a></li>
+                                        <li><a href="Columns.html">Columns</a></li>
+                                        <li><a href="Accordion_Tabs.html">Accordion &amp; Tabs</a></li>
+                                        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="sub-parent " href="Contacts.html">Contacts <span></span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+            </header>
+            <div id="main-container" class="intro">
+                <div id="breadcrumb-bar-wide">
+					<div id="breadcrumb-bar">
+						<div id="breadcrumb"><a href="#">Home</a> <b>&gt;</b> <a href="#">Shortcodes</a> <b>&gt;</b> <span class="current"> Accordion & Tabs</span></div>
+						<div class="socials">
+							<a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+							<a class="twitter" target="_blank" href="http://twitter.com" title=""></a>					
+							<a class="youtube" target="_blank" href="http://youtube.com" title=""></a>				
+						</div>
+					</div>
+				</div>
+                <div class="clear"></div>
+                <div id="search">
+                    <form role="search" method="get" id="searchform" action="#">
+                        <input type="text" class="placeholder" placeholder="Looking for something?" value="" name="s">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <h1 id="title" class="dark ">
+                    <span>
+                        Accordion & Tabs			
+                    </span>
+                </h1>
+                <div class="clear"></div>
+            </div>
+            <div role="main">
+                <section>
+                    <section class="page-content full-width">
+                        <div class="row-fluid">
+                            <div class="wpb_tabs wpb_content_element span12" data-interval="0">
+                                <div class="wpb_wrapper wpb_tour_tabs_wrapper">
+                                    <h2 class="wpb_heading wpb_tabs_heading">Title</h2>
+                                    <ul class="clearfix"><li><a href="#tab-1352375317039-6-0">Tab 1</a></li><li><a href="#tab-1352375317041-5-1">Tab 2</a></li><li><a href="#tab-1352375317043-10-2">Tab</a></li></ul>
+                                    <div id="tab-1352375317039-6-0" class="wpb_tab">
+                                        <div class="row-fluid">
+                                            <div class="wpb_content_element span12 wpb_text_column">
+                                                <div class="wpb_wrapper">
+                                                    <p>text</p>
+                                                </div> 
+                                            </div> </div> 
+                                    </div>  
+                                    <div id="tab-1352375317041-5-1" class="wpb_tab">
+                                        <div class="row-fluid">
+                                            <div class="wpb_content_element span12 wpb_text_column">
+                                                <div class="wpb_wrapper">
+                                                    <p>I am text block. Click edit button to change this text.</p>
+                                                </div> 
+                                            </div> </div> 
+                                    </div>  
+                                    <div id="tab-1352375317043-10-2" class="wpb_tab">
+                                        <div class="row-fluid">
+                                            <div class="wpb_content_element span12 wpb_text_column">
+                                                <div class="wpb_wrapper">
+                                                    <p>I am text block. Click edit button to change this text. I am text block.</p>
+                                                </div> 
+                                            </div> </div> 
+                                    </div>  
+                                </div> 
+                            </div> </div> <div class="row-fluid">
+                            <div class="wpb_content_element span12 wpb_text_column">
+                                <div class="wpb_wrapper">
+                                    <div class="one_half">
+                                        <h3>Accordion</h3>
+                                        <div class="clear"></div><div class="accordion"><ul><li><a href="" class="acc-title selected" >Nunc ut tempor massa. Aenean adipiscing<span class="acc-icon"></span></a><div class="sub-menu"><ul><li>Nunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat anteNunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat ante.</li></ul></div></li><li><a href="" class="acc-title" >Nunc ut tempor massa. Aenean adipiscing, neque nec volu<span class="acc-icon"></span></a><div class="sub-menu"><ul><li>Nunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat anteNunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat ante.</li></ul></div></li><li><a href="" class="acc-title" >Nunc ut tempor massa. Aenean adipiscing, neque nec volutpat<span class="acc-icon"></span></a><div class="sub-menu"><ul><li>Nunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat anteNunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat ante.</li></ul></div></li><li><a href="" class="acc-title" >Nunc ut tempor massa. Aenean adipiscing, neque nec v<span class="acc-icon"></span></a><div class="sub-menu"><ul><li>Nunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat anteNunc ut tempor massa. Aenean adipiscing, neque nec volutpat tristique, lorem enim facilisis mi, in varius nibh diam non ipsum. Donec erat ante.</li></ul></div></li></ul></div><div class="clear"></div>
+                                    </div>
+                                    <div class="one_half last">
+                                        <h3>Tabs</h3>
+                                        <div class="clear"></div>
+                                        <div class="example_tabs tabs-wrap">
+                                            <ul class="tab_nav">
+                                                <li id="tab-1" class=" active">title 1</li>
+                                                <li id="tab-2" class="">title 2</li>
+                                                <li id="tab-3" class="">title 2</li>
+                                            </ul>
+                                            <div class="clear"></div>
+                                            <div class="tabs tab-1 active" >Sed dictum vulputate turpis, vel viverra nisi dignissim id. Aliquam erat volutpat. Cras imperdiet est.</div>
+                                            <div class="tabs tab-2" >Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam porttitor tincidunt.</div>
+                                            <div class="tabs tab-3" >Donec sit amet diam et nunc tincidunt placerat non sit amet sem. Ut pharetra pharetra.</div>
+                                        </div><!-- tabs-wrapper end --><div class="clear"></div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        jQuery(document).ready(function(jQuery){
+                                            jQuery.fn.FlyUpSlider({
+                                                id: '.vendors-cell-m',
+                                                left: '.vendors-cell-m-container div.camera_prev',
+                                                right: '.vendors-cell-m-container div.camera_next',
+                                                time: 1500,
+                                                round: true,
+                                                delta: 222,
+                                                deltaerror:0 
+                                            });
+                                        });
+                                    </script><section id="destroy">
+                                        <div id="vendors" class="vendors-cell-m-container">
+                                            <div class="wrap-cell-wide">
+                                                <div class="wrap-cell">		
+                                                    <div class="vendors-cell-m">
+                                                        <ul class="vendors-table camera_effected">
+                                                            <li><img  src="http://placehold.it/140x147" alt=""></li><li><img  src="http://placehold.it/140x147" alt=""></li><li><img  src="http://placehold.it/140x147" alt=""></li><li><img  src="http://placehold.it/140x147" alt=""></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div><!-- .wrap-cell-wide -->
+                                            <div class="slider-nav-secondary clients">
+                                                <div class="camera_prev"><span></span></div>
+                                                <div class="camera_next"><span></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </section>
+                                </div> 
+                            </div> </div>
+                        <div class="clear"></div>
+                    </section>
+                </section>
+                <div class="clear"></div>
+            </div>
+            <div>
+                <div class="footer"></div>
+                <div class="clear"></div>
+                <footer>
+                    <div class="footer">
+                        <div id="logo-bottom">
+                            <div class="textwidget">
+                                <img src="http://placehold.it/144x153" alt="Logo">
+                            </div>
+                        </div>
+                        <div id="footer-container">
+                            <div class="footer-cell">
+                                <h2>Latest Posts</h2> 
+                                <p><b><a href="#" title="Mirum est notare">Mirum est notare</a></b>
+                                </p>
+                                <p><b>November 18, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                                <div class="hr"></div>
+                                <p><b><a href="#" title="Claritas est etiam">Claritas est etiam</a></b>
+                                </p>
+                                <p><b>November 15, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>tweets<a id="twit" title="" href="https://twitter.com/TheNextWeb">follow</a></h2>
+                                <div class="twitter-list">
+                                    <ul class="tweet_list">
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">Social trading: DCM Dealer uses Twitter and Facebook sentiment to help traders make investment decisions <a href="http://t.co/P8fQcWh5">http://t.co/P8fQcWh5</a> by <a href="http://twitter.com/MartinSFP">@MartinSFP</a></span>
+                                            <div class="hr"></div><span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">The NRA launches a target-practice shooting app on iOS...for ages 4+ <a href="http://t.co/Xuz3vXik">http://t.co/Xuz3vXik</a> by <a href="http://twitter.com/nisummers">@nisummers</a></span> 
+                                            <span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>Contacts</h2>	
+                                <div class="textwidget">
+                                    <p>The Company Name Inc.
+                                        <br>8901 Marmora Road,
+                                        <br>Glasgow, D04 89GR.</p>
+                                    <p class="footer-last">+1 800 559 6580</p>
+                                    <p class="footer-last">+1 800 603 6035</p>
+                                    <p class="footer-last">
+                                        <a class="e-mail" href="#" title="">mail@companyname.com</a>
+                                    </p>
+                                </div>
+                                <div class="socials">
+                                    <a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+                                    <a class="twitter" target="_blank" href="http://twitter.com" title=""></a>
+                                    <a class="youtube" target="_blank" href="http://youtube.com" title=""></a>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="copy">&copy; 2012 Novus. All Rights Reserved</div>
+                        <div class="clear"></div>
+                    </div>
+                </footer>
+            </div>
+            <a href="#top" class="gotop" id="top-link"><img src="images/gotop.png" alt="Go Top"/></a>
+            <!--script type="text/javascript" src="javascripts/retina.js"></script-->
+        </div>
+        <link rel='stylesheet' href='stylesheets/jquery-ui-less.custom.css' type='text/css' media='all'>
+        <script type='text/javascript' src='LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.0.0'></script>
+        <script type='text/javascript' src='LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+        <script type='text/javascript' src='flexslider/jquery.flexslider-min.js?ver=3.4.7'></script>
+        <script type='text/javascript' src='javascripts/js_composer_front.js?ver=3.4.7'></script>
+        <script type='text/javascript' src='javascripts/jquery.ui.core.min.js?ver=1.8.20'></script>
+        <script type='text/javascript' src='javascripts/jquery.ui.widget.min.js?ver=1.8.20'></script>
+        <script type='text/javascript' src='javascripts/jquery.ui.tabs.min.js?ver=1.8.20'></script>
+    </body>
+</html>

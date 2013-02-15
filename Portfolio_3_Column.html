@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta charset="UTF-8">
-        <title>Camera Slider</title>
+        <title>Portfolio 3 Column</title>
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="stylesheet" href="stylesheets/ch.css">
         <link rel="stylesheet" href="stylesheets/prettyPhoto.css"
@@ -32,6 +32,8 @@
         <script type='text/javascript' src='javascripts/jFlyup.js?ver=3.4.2'></script>
         <script type='text/javascript' src='javascripts/main.js?ver=3.4.2'></script>
         <script type='text/javascript' src='javascripts/jquery.scrollTo-min.js?ver=3.4.2'></script>
+        <script type="text/javascript" src="javascripts/transit.js"></script>
+        <script type="text/javascript" src="javascripts/isotop.js"></script>
         <!-- JAVASCRIPT -->
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
@@ -147,310 +149,164 @@
                     <div class="clear"></div>
                 </div>
             </header>
-            <div id="main-container">
+            <div id="main-container" class="intro">
                 <div id="breadcrumb-bar-wide">
-					<div id="breadcrumb-bar" class="front">
-						<div class="phone-number">
-							<div>Toll Free: 0800 987 65 43</div>
-						</div>
+					<div id="breadcrumb-bar">
+						<div id="breadcrumb"><a href="#">Home</a> <b>&gt;</b> <a href="#">Portfolio</a> <b>&gt;</b> <span class="current"> Portfolio 3 Column</span></div>
 						<div class="socials">
-							<a class="facebook" href="http://facebook.com" title=""></a>
-							<a class="twitter" href="http://twitter.com" title=""></a>
-							<a class="youtube" href="http://youtube.com" title=""></a>
+							<a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+							<a class="twitter" target="_blank" href="http://twitter.com" title=""></a>					
+							<a class="youtube" target="_blank" href="http://youtube.com" title=""></a>				
 						</div>
 					</div>
                 </div>
-                <script type="text/javascript">
-                    jQuery(function(jQuery){
-                        if (jQuery('div').is('#header-slider')){
-                            jQuery('#header-slider').camera({
-                                height: 'auto',
-                                navigation: false,
-                                navigationHover: false,
-                                loader: 'none',
-                                pagination: false,
-                                thumbnails: true,
-                                mobileAutoAdvance: true,
-                                autoAdvance: true,
-                                time: 3000,
-                                fx: "simpleFade, curtainSliceLeft, curtainSliceRight, scrollBottom, scrollTop",
-                                Cols:  "4",
-                                Rows:  "1",
-                                slicedCols:  "4",
-                                slicedRows: "1",
-                                transPeriod: 1000                       
-                            });
+                <div class="clear"></div>
+                <h1 id="title" class="dark title-bg">
+                    <span class="title-bg-box">
+                        Portfolio 3 Column			
+                    </span>
+                </h1>
+                <div class="clear"></div>
+            </div>
+            <script type="text/javascript">
+                // Custom sorting plugin
+                jQuery(document).ready(function(jQuery){
+                    var $filterType = jQuery('#filter input[name="type"]');
+                    var h = jQuery('#applications li').height();
+                    var c = jQuery('#applications li').length-1;
+                    h = h*c/4;
+                    //console.log(h);
+                    jQuery('#applications').css('height',h+135);
+                    var $applications = jQuery('#applications');
+                    var $data1 = $applications.clone();
+                    var $container = jQuery('#applications');
+                    $container.isotope({
+                        masonry: {
+                            columnWidth: 10
+                        },
+                        sortBy: 'number',
+                        getSortData: {
+                            number: function( $elem ) {
+                                var number = $elem.hasClass('element') ? 
+                                    $elem.find('.number').text() :
+                                    $elem.attr('data-number');
+                                return parseInt( number, 10 );
+                            },
+                            alphabetical: function( $elem ) {
+                                var name = $elem.find('.name'),
+                                itemText = name.length ? name : $elem;
+                                return itemText.text();
+                            }
                         }
                     });
-                </script>
-                <div id="header-slider">
-					<div class="slider-cell" data-link="" data-src="uploads/smaller_size-4.jpg">
-						<div class="header-slider-bar-wide">
-							<div class="header-slider-bar moveFromBottom">
-								<div class="slider-title">
-									<h2><span class="font-thin">Hi,</span><span class="font-black">Guest</span></h2>
-									<h3><b>Aenean tellus</b> commodo eu aliquet ut,</h3>
-								</div>
-								<div class="slider-description">
-									<p>
-										<b>Aenean tellus commodo eu aliquet ut, pulvinar ut sapien.</b>
-									</p>
-									<p>
-										Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui.
-									</p>
-									<p>
-										EDITORS - JUN, 29, 2012 <br>
-										<a href="#" title="">view details</a>
-									</p>
-								</div>
-								<div class="clear">
-								</div>
-								<div class="slider-nav-secondary">
-									<div class="camera_prev">
-										<span></span>
-									</div>
-									<div class="camera_next">
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- header-slider-bar-wide -->
-					</div>
-					<div class="slider-cell" data-link="" data-src="uploads/header1.jpg">
-						<div class="header-slider-bar-wide">
-							<div class="header-slider-bar fadeFromRight">
-								<div class="slider-title">
-									<h2><span class="font-thin">Hi,</span><span class="font-black">Guest</span></h2>
-									<h3><b>Aenean tellus</b> commodo eu aliquet ut,</h3>
-								</div>
-								<div class="slider-description">
-									<p>
-										<b>Aenean tellus commodo eu aliquet ut, pulvinar ut sapien.</b>
-									</p>
-									<p>
-										Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui.
-									</p>
-									<p>
-										EDITORS - JUN, 29, 2012 <br>
-										<a href="#" title="">view details</a>
-									</p>
-								</div>
-								<div class="clear">
-								</div>
-								<div class="slider-nav-secondary">
-									<div class="camera_prev">
-										<span></span>
-									</div>
-									<div class="camera_next">
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- header-slider-bar-wide -->
-					</div>
-					<div class="slider-cell" data-link="" data-src="uploads/SeattleNight-Grey.jpg">
-						<div class="header-slider-bar-wide">
-							<div class="header-slider-bar fadeFromRight">
-								<div class="slider-title">
-									<h2><span class="font-thin">Hi,</span><span class="font-black">Guest</span></h2>
-									<h3><b>Aenean tellus</b> commodo eu aliquet ut,</h3>
-								</div>
-								<div class="slider-description">
-									<p>
-										<b>Aenean tellus commodo eu aliquet ut, pulvinar ut sapien.</b>
-									</p>
-									<p>
-										Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui.
-									</p>
-									<p>
-										EDITORS - JUN, 29, 2012 <br>
-										<a href="#" title="">view details</a>
-									</p>
-								</div>
-								<div class="clear">
-								</div>
-								<div class="slider-nav-secondary">
-									<div class="camera_prev">
-										<span></span>
-									</div>
-									<div class="camera_next">
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- header-slider-bar-wide -->
-					</div>
-				</div>
-            </div>
+                    jQuery('#source a').click(function(e){
+                        e.preventDefault();
+                        jQuery('#source a').removeClass('active');
+                        jQuery(this).addClass('active');
+                        var $optionSets = jQuery('.option-set');
+                        $optionLinks = $optionSets.find('a');
+                        var $filteredData = null;
+                        var options = {},
+                        key = $optionSets.attr('data-option-key'),
+                        value = jQuery(this).attr('data-option-value');
+                        value = value === 'false' ? false : value;
+                        options[ key ] = value;         
+                        $container.isotope( options );
+                    });
+                });
+            </script>
             <div role="main">
-                <div class="main-content-area"> <div class="main-4col-wrap index-type6 "></div>
-                    <div class="clear"></div> </div>
                 <section>
-                    <aside><nav>
-                            <h2 class="blue">Services</h2>
-                            <ul>
-                                <li class="page_item page-item-2201"><a href="#">Extended Support</a></li>
-                                <li class="page_item page-item-2205"><a href="#">Quick Setup</a></li>
-                                <li class="page_item page-item-2203"><a href="#">SEO Friendly</a></li>
-                                <li class="page_item page-item-1032"><a href="#">Services</a></li>
-                            </ul>
-                        </nav></aside>
-                    <div class="main">
-                        <div class="textwidget">
-                            <div class="main-cell">
-                                    <h2>web <span>.01</span></h2>
-                                    <h3>Pellentesque habitant orbi tristique.</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, sectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere.
-                                    </p>
-                                    <a href="#" title="">view details</a>
-                            </div>
-                            <div class="main-cell">
-                                
-                                    <h2>motion <span>.02</span></h2>
-                                    <h3>Pellentesque habitant orbi tristique.</h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet, sectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere.
-                                    </p>
-                                    <a href="#" title="">view details</a>
-                            </div>
-                            <div class="main-cell">
-                                
-                                    <h2>print<span>.03</span></h2>
-                                    <h3>Pellentesque habitant orbi tristique.</h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet, sectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere.
-                                    </p>
-                                    <a href="#" title="">view details</a>
-                            </div>
-                        </div>
-                        <div class="clear">
-                        </div>
+                    <div id="g-filter" class="option-set"  data-option-key="filter">
+                        <p>Filter:</p>
+                        <ul id="source">
+                            <li >
+                                <a data-option-value="*" href="#" class="active">All</a>
+                            </li>
+                            <li class="">
+                                <a data-option-value=".motin" href="#" class="">Motina</a></li><li class="">
+                                <a data-option-value=".print" href="#" class="">Print</a></li><li class=" last">
+                                <a data-option-value=".web" href="#" class="">Web</a></li>				</ul>
                     </div>
-                    <div class="clear">
-                    </div>
+                    <div class="clear"></div>
                 </section>
-                <div class="clear"></div>
-                <section class="clients-block">
-                    <aside>
-                        <nav>
-                            <h2 class="blue">Projects</h2>
-                            <div class="textwidget">
-                                <div class="hr"></div>
-                                <a href="#" title="">view all</a>
-                                <div class="clear big-space" ></div>
-                            </div>
-                        </nav><nav>
-                            <h2 class="blue">About Us</h2>
-                            <ul>
-                                <li class="page_item page-item-2201"><a href="#">Extended Support</a></li>
-                                <li class="page_item page-item-2205"><a href="#">Quick Setup</a></li>
-                                <li class="page_item page-item-2203"><a href="#">SEO Friendly</a></li>
-                                <li class="page_item page-item-2227"><a href="#">Visual Composer</a></li>
-                                <li class="page_item page-item-1139"><a href="#">Testimonials</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
-                    <div id="profile" class="profile_home">
-                        <div id="secondary">
-                            <div class="slider-nav-secondary">
-                                <div class="camera_prev"><span></span></div>
-                                <div class="camera_next"><span></span></div>
-                            </div>
-                            <div id="secondary-thumbs">
-                                <ul>
-                                    <li>
-                                        <img alt="" src="http://placehold.it/350x205">
-                                        <div class="secondary-description">
-                                            <h2>Mirum est notare</h2>
-                                            <p>
-                                            <p>
-                                                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <p>
-                                                ...
-                                            </p>
-                                            <div class="secondary-info">
-                                                <span class="viewers">2261</span>
-                                                <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Mirum est notare">view</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img alt="" src="http://placehold.it/350x205">
-                                        <div class="secondary-description">
-                                            <h2>Claritas est etiam</h2>
-                                            <p>
-                                            <p>
-                                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare.
-                                            </p>
-                                            <p>
-                                                Proin vulputate aliquam mi nec hendrerit. Sed fermentum...
-                                            </p>
-                                            <div class="secondary-info">
-                                                <span class="viewers">2182</span>
-                                                <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Claritas est etiam">view</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img alt="" src="http://placehold.it/350x205">
-                                        <div class="secondary-description">
-                                            <h2>Mirum est notare</h2>
-                                            <p>
-                                            <p>
-                                                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <p>
-                                                Claritas...
-                                            </p>
-                                            <div class="secondary-info">
-                                                <span class="viewers">765</span>
-                                                <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Mirum est notare">view</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img alt="" src="http://placehold.it/350x205">
-                                        <div class="secondary-description">
-                                            <h2>Claritas est etiam</h2>
-                                            <p>
-                                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare.
-                                            </p>
-                                            <p>
-                                                Proin vulputate aliquam mi nec hendrerit. Sed fermentum...
-                                            </p>
-                                            <div class="secondary-info">
-                                                <span class="viewers">761</span>
-                                                <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Claritas est etiam">view</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clear medium-space"></div>
-                        <div class="profile">
-                            <h2>Profile</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h3>
-                            <p>
-                                Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, <a title="" href="#">commodo eu aliquet</a> ut, pulvinar ut sapien. Proin vulputate aliquam mi nec hendrerit. Sed fermentum velit vel ipsum bibendum tristique. Ut sem lacus, porttitor et aliquam eget, iaculis id lacus. Praesent sollicitudin, nibh nec mattis lobortis, dui massa eleifend magna, eget consequat risus felis dignissim ligula.
-                            </p>
-                            <p>
-                                Morbi a libero eget erat auctor cursus vitae id tortor. Suspendisse rhoncus facilisis adipiscing. Vestibulum eu ligula lorem. Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. Proin vulputate aliquam mi nec hendrerit. Sed fermentum velit vel ipsum bibendum tristique. Ut sem lacus, porttitor et aliquam eget, iaculis id lacus.
-                            </p>
-                            <p>
-                                <a title="" href="#">view all</a>
-                            </p>
-                        </div>
-                    </div>
+                <section>
+                    <div id="gallery" class="portfolio col3">
+                        <ul id="applications" class="isotope">
+                            <li id="id-2261" data-type="web isotope-item" class="preview  web ">
+                                <a href="#" title="Mirum est notare" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Mirum est notare"><h2>Mirum est notare</h2></a>
+                                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut...<p></p>
+                                    <div class="secondary-info">
+                                        <span class="viewers" >461</span>
+                                        <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Mirum est notare">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <li id="id-2182" data-type="web isotope-item" class="preview  web ">
+                                <a href="#" title="Claritas est etiam" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Claritas est etiam"><h2>Claritas est etiam</h2></a>
+                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare.</p>
+                                    <p>Proin vulputate aliquam...<p></p>
+                                    <div class="secondary-info"><span class="viewers">387</span>
+                                        <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Claritas est etiam">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <li id="id-765" data-type="print isotope-item" class="preview  print ">
+                                <a href="#" title="Mirum est notare" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Mirum est notare"><h2>Mirum est notare</h2></a>
+                                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut...<p></p>
+                                    <div class="secondary-info"><span class="viewers">108</span>
+                                        <a class="view view_gallery prettyPhoto" href="http://placehold.it/600x500" title="Mirum est notare">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <li id="id-761" data-type="print isotope-item" class="preview  print ">
+                                <a href="#" title="Claritas est etiam" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Claritas est etiam"><h2>Claritas est etiam</h2></a>
+                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare.</p>
+                                    <p>Proin vulputate aliquam...<p></p>
+                                    <div class="secondary-info">
+                                        <span class="viewers">136</span><a class="view prettyPhoto" href="http://placehold.it/600x500" title="Claritas est etiam">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <li id="id-757" data-type="web isotope-item" class="preview  web ">
+                                <a href="#" title="Duis autem" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Duis autem"><h2>Duis autem</h2></a>
+                                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare.</p>
+                                    <p>Proin vulputate aliquam...<p></p>
+                                    <div class="secondary-info"><span class="viewers">159</span>
+                                        <a class="view prettyPhoto" href="http://placehold.it/600x500" title="Duis autem">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <li id="id-734" data-type="web isotope-item" class="preview  web ">
+                                <a href="#" title="Sample Portfolio" ><img  src="http://placehold.it/295x206" class="feature" alt=""></a>
+                                <div class="secondary-gal">
+                                    <a href="#" title="Sample Portfolio"><h2>Sample Portfolio</h2></a>
+                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequa.</p>
+                                    <p>Proin vulputate...<p></p>
+                                    <div class="secondary-info">
+                                        <span class="viewers">55</span>
+                                        <a class="view view_gallery prettyPhoto" href="http://placehold.it/600x500" title="Sample Portfolio">view</a>
+                                    </div>
+                                </div>               
+                            </li>
+                            <!--li class="view"></li-->          
+                        </ul>
+                        <div class="clear"></div></div>
+                    <div class="clear"></div>
                 </section>
-                <div class="clear"></div>
+                <section>
+                    <div class="clear"></div>
+                </section>
                 <script type="text/javascript">
                     $.fn.infiniteCarousel = function () {
                         function repeat(str, num) {
@@ -517,28 +373,27 @@
                 <section>
                     <aside class="vendors">
                         <nav>
-                            <h3 class="widget-title">Our Clients</h3>                   
-                            <div class="hr"></div>              
-                            <a href="#"  title="view all">view all</a>
+                            <h2 class="blue">Our Clients</h2>					<div class="hr"></div>				
+                            <a class="highlight" href="#"  title="view all">view all</a>
                         </nav>
                     </aside>
                     <div id="vendors">
                         <div class="wide-background"></div>
                         <div class="infiniteCarousel">
                             <!-- <h2 class="blue">our cliens</h2> -->
-                            <div class="wrapper">       
+                            <div class="wrapper">		
                                 <ul>
                                     <li>
-                                        <img  src="http://placehold.it/140x147" alt="">
+                                        <img  src="images/pictures/c.png" alt="">
                                     </li>
                                     <li>
-                                        <img  src="http://placehold.it/140x147" alt="">
+                                        <img  src="images/pictures/c.png" alt="">
                                     </li>
                                     <li>
-                                        <img  src="http://placehold.it/140x147" alt="">
+                                        <img  src="images/pictures/c.png" alt="">
                                     </li>
                                     <li>
-                                        <img  src="http://placehold.it/140x147" alt="">
+                                        <img  src="images/pictures/c.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -550,7 +405,6 @@
                     </div>
                     <div class="clear"></div>
                 </section>
-                <div class="clear"></div>
             </div>
             <div>
                 <div class="footer"></div>
@@ -591,7 +445,7 @@
                                 </div>
                             </div>
                             <div class="footer-cell">
-                                <h2>Contacts</h2>   
+                                <h2>Contacts</h2>	
                                 <div class="textwidget">
                                     <p>The Company Name Inc.
                                         <br>8901 Marmora Road,

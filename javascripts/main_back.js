@@ -1,7 +1,4 @@
 jQuery(document).ready(function(jQuery) {
-	jQuery(".prettyPhoto").prettyPhoto();
-	jQuery(".prettyphoto").prettyPhoto();
-
 	if(jQuery('.testimonials-list-item')){
 		jQuery('.testimonials-list-item').animate({opacity:0});
 		jQuery('.testimonials-list .testimonials-list-item').first().animate({opacity:1}).addClass('active');
@@ -69,7 +66,7 @@ jQuery(document).ready(function(jQuery) {
 
 
 
-	if ($.browser.msie)
+	if (jQuery.browser.msie)
 	{
 		jQuery('#applications li,#secondary-thumbs li').mouseenter(function()
 		{
@@ -242,14 +239,14 @@ jQuery(document).ready(function(jQuery) {
 	
 		
 	
-		jQuery.fn.FlyUpSlider({
-			id: '#secondary-thumbs',
-			left: '#secondary div.camera_next',
-			right: '#secondary div.camera_prev',
-			round: true,
-			delta: 340,
-			deltaerror:0 
-		});
+		//jQuery.fn.FlyUpSlider({
+		//	id: '#secondary-thumbs',
+		//	left: '#secondary div.camera_next',
+		//	right: '#secondary div.camera_prev',
+		//	round: true,
+		//	delta: 340,
+		//	deltaerror:0 
+		//});
 	
 	
 	
@@ -261,22 +258,7 @@ jQuery(document).ready(function(jQuery) {
 		}
 	});
 
-	jQuery('.wpb_flexslider').each(function() {
-        var this_element = jQuery(this);
-        var sliderSpeed = 800,
-            sliderTimeout = parseInt(this_element.attr('data-interval'))*1000,
-            sliderFx = this_element.attr('data-flex_fx'),
-            slideshow = true;
-        if ( sliderTimeout == 0 ) slideshow = false;
 
-        this_element.flexslider({
-            animation: sliderFx,
-            slideshow: slideshow,
-            slideshowSpeed: sliderTimeout,
-            sliderSpeed: sliderSpeed,
-            smoothHeight: true
-        });
-    });
 
 });
 jQuery.fn.goLink = function(settings) {
@@ -317,3 +299,23 @@ function Testimonial(prev){
 		}
 	}
 };
+
+jQuery(window).load(function() {
+    jQuery('.wpb_flexslider').each(function() {
+        var this_element = jQuery(this);
+        var sliderSpeed = 800,
+            sliderTimeout = parseInt(this_element.attr('data-interval'))*1000,
+            sliderFx = this_element.attr('data-flex_fx'),
+            slideshow = true;
+        if ( sliderTimeout == 0 ) slideshow = false;
+
+        this_element.flexslider({
+            animation: sliderFx,
+            slideshow: slideshow,
+            slideshowSpeed: sliderTimeout,
+            sliderSpeed: sliderSpeed,
+            smoothHeight: true
+        });
+    });
+
+});

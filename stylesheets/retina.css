@@ -1,0 +1,127 @@
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+ only screen and (-o-min-device-pixel-ratio: 3/2),
+ only screen and (min--moz-device-pixel-ratio: 1.5),
+ only screen and (min-device-pixel-ratio: 1.5)
+ {*/
+	.facebook, .twitter, .skype, .youtube,
+	.facebook:hover, .twitter:hover, .skype:hover, .youtube:hover,
+	#search input[type="submit"], .accordion ul li a, .accordion ul li.active a,
+	.alert_notice span, .alert_info span, .alert_success span, .alert_error span,
+	#vendors div.camera_next, #vendors div.camera_prev,
+	#vendors div.camera_next:hover, #vendors div.camera_prev:hover,
+	UL.blue-arrow.text_list LI, .list .blue-arrow A,
+	UL.disc.text_list LI,
+	UL.check.text_list LI, .list .check A,
+	UL.star.text_list LI, .list .star A,
+	UL.dash.text_list LI, .list .dash A,
+	UL.plus.text_list LI, .list .plus A
+	{
+		background-image: url('images/retina/sprite@2x.png');
+		background-size:500px 500px;
+	}
+	.facebook{
+		background-position: 0 -16px;
+	}
+	.facebook:hover{
+		background-position: 0 0;
+	}
+	.twitter{
+		 background-position: -16px -16px;
+	}
+	.twitter:hover{
+		background-position: -16px 0;
+	}
+	.skype{
+		background-position: -46px -16px;
+	}
+	.skype:hover{
+		background-position: -48px 0;
+	}
+	.youtube{
+		background-position: -32px -16px;
+	}
+	.youtube:hover{
+		
+		background-position: -32px 0;
+	}
+
+
+
+	span.prev{
+		background: url("images/retina/prev-ico@2x.png") no-repeat center center;
+		background-size:5px 9px;
+	}
+	span.next{
+		background: url("images/retina/next-ico@2x.png") no-repeat center center;
+		background-size:5px 9px;
+	}
+	#main-nav ul li a.sub-parent.li_parent, #main-nav ul li.menu-parent-item>a{
+		background: url("images/retina/li-parent@2x.png") no-repeat 90% 50%;
+		background-size:7px 5px;
+	}
+	#search input[type="submit"]{
+		background-image: url('images/retina/sprite@2x.png');
+		background-position: 0 -84px;
+	}
+
+	/*--------------------------------------------------------------------*/
+	.accordion ul li a {
+		background-position: 0 -54px;
+	}
+	.accordion ul li.active a {
+		background-position: 0 -69px;
+	}
+
+	/*--------------------------------------------------------------------*/
+	.alert_notice span{
+		background-position: -66px -32px;
+	}
+	.alert_info span {
+		background-position: -22px -32px;
+	}
+	.alert_success span {
+		background-position: -44px -32px;
+	}
+	.alert_error span {
+		background-position: 0 -32px;
+	}
+
+	/*--------------------------------------------------------------------*/
+	#vendors div.camera_next {
+		background-position: -118px -25px;
+	}
+	#vendors div.camera_next:hover{
+		background-position: -118px 0;
+	}
+	#vendors div.camera_prev{
+		background-position: -88px -25px;
+	}
+	#vendors div.camera_prev:hover{
+		background-position: -88px 0;
+	}
+	
+	UL.blue-arrow.text_list LI, .list .blue-arrow A
+	{
+		background-position:0 -194px;
+	}
+	UL.disc.text_list LI
+	{
+		background-position:0 -100px;
+	}
+	UL.check.text_list LI, .list .check A
+	{
+		background-position:0 -296px;
+	}
+	UL.star.text_list LI, .list .star A
+	{
+		background-position:0 -119px;
+	}
+	UL.dash.text_list LI, .list .dash A
+	{
+		background-position:0 -137px;
+	}
+	UL.plus.text_list LI, .list .plus A
+	{
+		background-position:0 -347px;
+	}
+/*}*/

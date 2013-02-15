@@ -1,0 +1,312 @@
+#banner{
+
+	position: absolute;
+
+	width: 100%;
+
+	height: 420px;
+
+}
+
+
+
+.oneByOne1{
+
+/*	margin-top: 10px;*/
+
+	padding-top: 0px;
+
+	width: 100%;
+
+	height: 420px;   
+
+/*	background: #EFEFEF url(../images/assets/paven.png) repeat;    */
+
+	position: relative;
+
+	overflow: hidden;  	
+
+}   
+
+.oneByOne1 #header-slider {
+
+display: block;
+
+}
+
+#banner .oneByOne_item{
+
+	position: absolute;
+
+	width: 100%;
+
+	height: 420px;  
+
+	overflow: hidden;  
+
+	display: none;
+
+}         
+
+
+
+#exampleline{
+
+	position: relative;
+
+	margin: 5% 0 0 0;
+
+}
+
+
+
+
+
+/* change the width of the slider in your own responsive media query */
+
+@media only screen and (min-width: 960px) {
+
+	.oneByOne1, #banner .oneByOne_item, #wrapper, .onByOne_item img{
+
+		width: 100%;
+
+	}
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+
+	.oneByOne1, #banner .oneByOne_item, #wrapper, #exampleline img{ width: 100% }
+
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+	.oneByOne1, #banner .oneByOne_item, #wrapper, #exampleline img{
+
+		width: 100%;
+
+	}	
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+	.oneByOne1, #banner .oneByOne_item, #wrapper, #exampleline img{
+
+		width: 100%;
+
+	}
+
+	
+
+}
+
+                      
+
+#banner .oneByOne_item span{
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+
+}                                                                                              
+
+
+
+#banner .oneByOne_item a{
+
+	text-decoration: none;
+
+	color: #B22222;
+
+}
+
+              
+
+
+
+
+
+#banner .oneByOne_item span.slide1Txt1{ 
+
+  	position: relative;
+
+	float: left;
+
+	margin: 10% 2% 0 20%;
+
+	color: #9ACD32;	
+
+	font-size: 24px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}
+
+ 
+
+#banner .oneByOne_item span.slide1Txt2{ 
+
+  	position: relative;
+
+	clear: left;
+
+	float: left;
+
+	margin: 6px 2% 0 20%;
+
+	color: #666666;	
+
+	font-size: 14px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}   
+
+
+
+#banner .oneByOne_item span.slide1Txt3{ 
+
+  	position: relative;
+
+	clear: left;
+
+	float: left;
+
+	margin: 6px 2% 0 20%;
+
+	color: #666666;	
+
+	font-size: 12px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}     
+
+                    
+
+  
+
+
+
+#banner .oneByOne_item img.bigImage{ 
+
+	position: absolute;
+
+	top: 0; 
+
+	left: 0;
+
+	width: 100%;
+
+	height: 100%;
+
+
+
+}
+
+
+
+#banner .oneByOne_item span.slide2Txt1{ 
+
+  	position: relative;
+
+	float: left;
+
+	margin: 10% 0 0 40%;
+
+	color: #9ACD32;	
+
+	font-size: 24px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}
+
+ 
+
+#banner .oneByOne_item span.slide2Txt2{ 
+
+  	position: relative;
+
+	clear: left;
+
+	float: left;
+
+	margin: 12px 0 0 40%;
+
+	color: #666666;	
+
+	font-size: 12px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}  
+
+
+
+#banner .oneByOne_item span.slide3Txt1{ 
+
+  	position: relative;
+
+	float: left;
+
+	margin: 8% 0 0 30%;
+
+	color: #9ACD32;	
+
+	font-size: 24px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}
+
+ 
+
+#banner .oneByOne_item span.slide3Txt2{ 
+
+  	position: relative;
+
+	clear: left;
+
+	float: left;
+
+	margin: 12px 0 0 30%;
+
+	color: #666666;	
+
+	font-size: 12px;  
+
+	background: #FFFFFF;
+
+	padding: 8px;             
+
+}  
+
+.oneByOne_item .slider-title,
+.oneByOne_item .slider-description{
+	position: relative;
+	float: none;
+	margin: 40px 0 40px 140px;
+	padding: 20px;
+	color: #fff;
+	background: rgba(60,140,191,0.78);
+	border: rgba(60,140,191,0.9);
+}

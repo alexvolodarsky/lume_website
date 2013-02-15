@@ -1,0 +1,51 @@
+h1#title{font-family:"Lato" !important;}h1#title{font-size:30px !important;}
+#drop-down-nav UL LI UL LI{background:#367FB3 !important;}
+#drop-down-nav UL LI UL LI A:HOVER{color:#ffffff !important;}
+#drop-down-nav UL LI UL LI A:HOVER{background:#52baff !important;}
+#drop-down-nav UL LI span{background:#367FB3 !important;}
+.prettyphoto.preview .plus{background-color:#367FB3 !important;}
+.progress-bar .progress-bar-value{background:#367FB3 !important;}
+#drop-down-nav UL LI UL LI{background:#367FB3 !important;}
+.slider-nav-secondary div.camera_prev,
+.slider-nav-secondary div.camera_next{background-color:#367FB3 !important;}
+a:hover img.blog-icon{background-color:#367FB3 !important;}
+a.gotop:hover img{background-color:#367FB3 !important;}
+.slider-nav-secondary.clients div.camera_prev,
+.slider-nav-secondary.clients div.camera_next{background-color: transparent !important;}
+.title-bg-box, 
+.secondary-gal,
+.header-slider-bar,
+.secondary-description{background: rgba(54,127,179,0.78) !important;}
+.simple-pricing-table .features li[data-tooltip]:before, 
+.extended-pricing-table .features li[data-tooltip]:before{background:#367FB3 !important;}
+.simple-pricing-table .features li[data-tooltip]:before, 
+.extended-pricing-table 
+.features li[data-tooltip]:before{border:1px solid #367FB3 !important;}
+.simple-pricing-table .features li[data-tooltip]:before, 
+.extended-pricing-table .features li[data-tooltip]:before{color:#ffffff !important;}
+.simple-pricing-table .features li[data-tooltip]:after, 
+.extended-pricing-table .features li[data-tooltip]:after{background:#367FB3 !important;}
+.simple-pricing-table .features li[data-tooltip]:after, 
+.extended-pricing-table .features li[data-tooltip]:after{border-bottom:1px solid #367FB3 !important;}
+.simple-pricing-table .features li[data-tooltip]:after, 
+.extended-pricing-table .features li[data-tooltip]:after{border-right:1px solid #367FB3 !important;}	
+body{
+	font-family:"Lato" !important;
+	font-size: 12px}
+#main-nav ul li a{
+font-family:"Lato" !important;
+	font-size: 11px}
+h1,h2,h3,h4,h5{
+	font-family:"Lato" !important;
+}
+#portfolio-list>li.preview {
+	z-index: 100;
+}
+#portfolio-works>.item {
+	z-index: 150;
+	}
+aside.right {
+		    float: right;
+		    padding: 50px 0 0  40px;
+		    width: 220px;
+		}

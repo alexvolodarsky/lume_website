@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="UTF-8">
+        <title>Blog Template 2</title>
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="stylesheet" href="stylesheets/ch.css">
+        <link rel="stylesheet" href="stylesheets/prettyPhoto.css"
+              type="text/css" media="screen, projection">
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="javascripts/html5shiv.js"></script>
+        <![endif]-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+              rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/camera.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="stylesheets/js_composer_front.css" type="text/css" media="screen, projection">
+        <link rel='stylesheet' id='layerslider_css-css'  href='stylesheets/layerslider.css?ver=3.0.0' type='text/css' media='all'>
+        <link rel='stylesheet' id='flexslider-css'  href='flexslider/flexslider.css?ver=3.4.7' type='text/css' media='screen'>
+        <link rel='stylesheet' id='bootstrap-css'  href='stylesheets/bootstrap.css?ver=3.4.7' type='text/css' media='screen'>
+		<link rel="stylesheet" href="stylesheets/wide.css">
+        <!-- 111 -->
+        <script type='text/javascript' src='javascripts/jquery-1.7.2.min.js?ver=1.7.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.mobile.customized.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.easing.1.3.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.transition.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/camera.min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.prettyPhoto.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.backgroundpos.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jFlyup.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/main.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='javascripts/jquery.scrollTo-min.js?ver=3.4.2'></script>
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                jQuery('a.content-top-button').click(function (e) {
+                    e.preventDefault();
+                    jQuery.scrollTo('#top', {
+                        duration: 500
+                    });
+                });
+                $("#applications  a.view,#secondary-thumbs a.view").each(function () {
+                    if ($(this).hasClass("view_video")) {
+                        try {
+                            var id = this.href.split("#")[1];
+                            var width = parseInt($("#" + id).find("iframe").attr("width"));
+                            var height = parseInt($("#" + id).find("iframe").attr("height"));
+                            $(this).attr("rel", "").prettyPhoto({
+                                default_width: width,
+                                default_height: height
+                            });
+                        } catch (e) {
+                        }
+                    } else if ($(this).hasClass("view_gallery")) {
+                        $("a[rel='" + this.rel + "']").prettyPhoto();
+                    } else {
+                        $(this).prettyPhoto({
+                            keyboard_shortcuts: false
+                        });
+                    }
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="stylesheets/ig_main.css">
+        <link rel="stylesheet" href="stylesheets/ch001.css">
+        <link rel="stylesheet" href="stylesheets/media.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300,100' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="full-width">
+            <header>
+                <div id="header">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="http://placehold.it/132x97" alt="Logo">
+                            <h2>Clean Corporate Theme</h2>
+                        </a>
+                    </div>
+                    <nav id="main-nav">
+                        <div id="drop-down-nav">
+                            <ul>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="index.html">Home <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Homepage_Example_1.html">Homepage Example 1</a></li>
+                                        <li><a href="Homepage_Example_2.html">Homepage Example 2</a></li>
+                                        <li><a href="Homepage_Example_3.html">Homepage Example 3</a></li>
+                                        <li><a href="Homepage_Example_4.html">Homepage Example 4</a></li>
+                                        <li><a href="Homepage_Example_5.html">Homepage Example 5</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Blog.html">Blog <span></span></a>
+                                    <ul>
+                                        <li><a href="Blog_Template_1.html">Blog Template 1</a></li>
+                                        <li><a href="Blog_Template_2.html">Blog Template 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Sliders.html">Sliders <span></span></a>
+                                    <ul>
+                                        <li><a href="Layer_Slider.html">Layer Slider</a></li>
+                                        <li><a href="One_By_One_Slider.html">One By One Slider</a></li>
+                                        <li><a href="Camera_Slider.html">Camera Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Pages.html">Pages <span></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="Video_Page_Template.html">Video Page Template</a></li>
+                                        <li><a href="Services.html">Services</a></li>
+                                        <li><a href="FAQ.html">FAQ</a></li>
+                                        <li><a href="Our_Team.html">Our Team</a></li>
+                                        <li><a href="Page_with_Left_Sidebar.html">Page with Left Sidebar</a></li>
+                                        <li><a href="Page_with_Right_Sidebar.html">Page with Right Sidebar</a></li>
+                                        <li><a href="Embed_Video.html">Embed Video</a></li>
+                                        <li><a href="Full_Width_Page.html">Full Width Page</a></li>
+                                        <li><a href="Pricing_Page.html">Pricing Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Portfolio.html">Portfolio <span></span></a>
+                                    <ul>
+                                        <li><a href="Portfolio_2_Column.html">Portfolio 2 Column</a></li>
+                                        <li><a href="Portfolio_3_Column.html">Portfolio 3 Column</a></li>
+                                        <li><a href="Portfolio_4_Column.html">Portfolio 4 Column</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sub-parent  li_parent" href="Shortcodes.html">Shortcodes <span></span></a>
+                                    <ul>
+                                        <li><a href="Price_Tables.html">Price Tables</a></li>
+                                        <li><a href="Testimonials.html">Testimonials</a></li>
+                                        <li><a href="Columns.html">Columns</a></li>
+                                        <li><a href="Accordion_Tabs.html">Accordion &amp; Tabs</a></li>
+                                        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="sub-parent " href="Contacts.html">Contacts <span></span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+            </header>
+            <div id="main-container" class="intro">
+                <div id="breadcrumb-bar-wide">
+					<div id="breadcrumb-bar" >
+						<div id="breadcrumb"><a href="#">Home</a> <b>></b> <a href="#">Blog</a> <b>></b> <span class="current" > Blog Template 2</span></div>
+						<div class="socials">
+							<a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+							<a class="twitter" target="_blank" href="http://twitter.com" title=""></a>					
+							<a class="youtube" target="_blank" href="http://youtube.com" title=""></a>				
+						</div>
+					</div>
+				</div>	
+                <div class="clear"></div>
+                <h1 id="title" class="dark title-bg">
+                    <span class="title-bg-box">
+                        Blog Template 2					
+                    </span>
+                </h1>
+                <div class="clear"></div>
+            </div>
+            <div role="main">
+                <section>
+                    <section>
+                        <div class="blog-item">
+                            <div class="blog2-item-1 right">	
+                                <div id="ship-img_">
+                                    <a class="" href="#"><img src="http://placehold.it/290x230" alt=""></a>
+                                </div>															</div>
+                            <div class="blog2-item-2 ">
+                                <div class="item-title">
+                                    <a class="" href="#"><img src="images/post_icon_.png" class="blog-icon" alt=""></a>
+                                    <a href="#" title="This is a Standart Post"><h2 class="blue">This is a Standart Post</h2>
+                                    </a><div class="blog-info"><a href="#" title="This is a Standart Post"><span>Date:</span> <span>19.11.2012</span> 
+                                            <span class="spacer">|</span> 
+                                        </a><a href="#" title="View all posts in Uncategorized">Uncategorized</a>									<span class="spacer">|</span> 
+                                        <a title="" href="#">1  Comments</a></div>
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere. Suspendisse rhoncus facilisis adipiscing....							</div>
+                            <div class="clear"></div>
+                            <a class="post-link all" href="#">view all</a>
+                            <div class="blog-hr hr"></div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="blog2-item-1 left">	
+                                <div class='blog-gallery'><div id='third' class='small' >
+                                        <div class='slider-cell-small' data-src='http://placehold.it/290x230'> 
+                                            <div class='slider-nav-secondary fadeIn'>
+                                                <div class='camera_prev'><span></span></div>
+                                                <div class='camera_next'><span></span></div>
+                                            </div></div>
+                                        <div class='slider-cell-small' data-src='http://placehold.it/290x230'> 
+                                            <div class='slider-nav-secondary fadeIn'>
+                                                <div class='camera_prev'><span></span></div>
+                                                <div class='camera_next'><span></span></div>
+                                            </div></div></div><div class='clear'></div></div><div class='small blog-hr hr'></div>																	<div class="tags">
+                                    <span>Tags:</span> 
+                                    <a title="days" href="#">days</a> , 
+                                    <a title="happy" href="#">happy</a> , 
+                                    <a title="life" href="#">life</a>  
+                                </div>
+                            </div>
+                            <div class="blog2-item-2 ">
+                                <div class="item-title">
+                                    <a class="" href="#"><img src="images/slider_post_icon.png" class="blog-icon" alt=""></a>
+                                    <a href="#" title="Gallery Post Sample"><h2 class="blue">Gallery Post Sample</h2>
+                                    </a><div class="blog-info"><a href="#" title="Gallery Post Sample"><span>Date:</span> <span>15.11.2012</span> 
+                                            <span class="spacer">|</span> 
+                                        </a><a href="#" title="View all posts in Uncategorized">Uncategorized</a>									<span class="spacer">|</span> 
+                                        <a title="" href="#">0  Comments</a></div>
+                                </div>
+                                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore...							</div>
+                            <div class="clear"></div>
+                            <a class="post-link all" href="#">view all</a>
+                            <div class="blog-hr hr"></div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="blog2-item-1 right">	
+                                <div id="video-object">
+                                    <iframe class="blog-narrow" src="http://www.youtube.com/embed/Mx1tiq15Hqs"></iframe>
+                                </div>	
+                            </div>
+                            <div class="blog2-item-2 ">
+                                <div class="item-title">
+                                    <a class="" href="#"><img src="images/play.png" class="blog-icon" alt=""></a>
+                                    <a href="#" title="Video Post Sample"><h2 class="blue">Video Post Sample</h2>
+                                    </a><div class="blog-info"><a href="#" title="Video Post Sample"><span>Date:</span> <span>22.08.2012</span> 
+                                            <span class="spacer">|</span> 
+                                        </a><a href="#" title="View all posts in Uncategorized">Uncategorized</a> <span class="spacer">|</span> 
+                                        <a title="" href="#">0  Comments</a></div>
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique ante sit amet sem pulvinar posuere. Suspendisse rhoncus facilisis adipiscing....							</div>
+                            <div class="clear"></div>
+                            <a class="post-link all" href="#">view all</a>
+                            <div class="blog-hr hr"></div>
+                        </div>
+                    </section>
+                    <aside>
+                        <div class=''><nav class="categories">
+                                <h2 class="blue">Categories</h2>
+                                <ul>	<li class="cat-item cat-item-1"><a href="#" title="View all posts filed under Uncategorized">Uncategorized</a> (6)
+                                    </li>
+                                </ul>
+                            </nav>		<nav><h2 class="blue">Archives</h2>
+                                <ul>	<li><a href='#' title='November 2012'>November 2012</a></li>
+                                    <li><a href='#' title='September 2012'>September 2012</a></li>
+                                    <li><a href='#' title='August 2012'>August 2012</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="popularposts">
+                                <h2 class="blue">  Popular Posts  </h2>
+                                <ul>
+                                    <li>
+                                        <img  src="http://placehold.it/50x50" alt=""> <a title="Strategy Planning" href="#">Strategy Planning</a>
+                                        <div>Date: 01.08.2012</div>
+                                    </li>
+                                    <li>
+                                        <img  src="http://placehold.it/50x50"  alt=""> <a title="Innovation" href="#">Innovation</a>
+                                        <div>Date: 06.08.2012</div>
+                                    </li>
+                                    <li>
+                                        <img src="http://placehold.it/50x50" alt="" > <a title="This is a Standart Post" href="#">This is a Standart Post</a>
+                                        <div>Date: 03.09.2012</div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="popularposts twitter"><h2 class="blue"><span>Tweets</span></h2><ul> <li><span>22-Year-Old's Sci-Fi Digital Short Gets Hollywood's Attention - <a href="http://t.co/tqMmaCxy">http://t.co/tqMmaCxy</a></span><div>8 minutes ago</div><div class="clear"></div></li><li><span>Can Twitter Help People Lose Weight? <a href="http://t.co/ySQaeCR4">http://t.co/ySQaeCR4</a></span><div>9 minutes ago</div><div class="clear"></div></li><li><span>Can Twitter Predict the Future? The Pentagon Is Hoping So - <a href="http://t.co/qerlQHpy">http://t.co/qerlQHpy</a> via <a href="http://twitter.com/Nextgov">@Nextgov</a></span><div>11 minutes ago</div><div class="clear"></div></li></ul></nav><nav><h2 class="blue">Accordion</h2>			<div class="textwidget"><div class="accordion">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="">Cavus Aenean tellus nisl</a>
+                                                <div class="sub-menu">
+                                                    <p>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="">Sed fermentum velit vel</a>
+                                                <div class="sub-menu">
+                                                    <p>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. </p>
+                                                </div>	
+                                            </li>
+                                            <li>
+                                                <a href="#" title="">Suspendisse rhoncus facilisis</a>
+                                                <div class="sub-menu">
+                                                    <p>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="">Vestibulum eu ligula lorem.</a>
+                                                <div class="sub-menu">
+                                                    <p>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div></div>
+                            </nav></div>				
+                    </aside>
+                    <div class="clear"></div>
+                    <section>
+                        <nav id="blog-nav-bottom">
+                            <div class="navigation"><a class="prev page-numbers" href="javascript:;"><span class="prev">&nbsp;</span></a>
+                                <span class='page-numbers current'>01</span>
+                                <a class='page-numbers' href='#&#038;paged=2'>02</a>
+                                <a class="next page-numbers" href="#&#038;paged=2"><span class="next">&nbsp;</span></a></div>						
+                        </nav>
+                    </section>
+                </section>
+            </div>
+            <div>
+                <div class="footer"></div>
+                <div class="clear"></div>
+                <footer>
+                    <div class="footer">
+                        <div id="logo-bottom">
+                            <div class="textwidget">
+                                <img src="http://placehold.it/144x153" alt="Logo">
+                            </div>
+                        </div>
+                        <div id="footer-container">
+                            <div class="footer-cell">
+                                <h2>Latest Posts</h2> 
+                                <p><b><a href="#" title="Mirum est notare">Mirum est notare</a></b>
+                                </p>
+                                <p><b>November 18, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                                <div class="hr"></div>
+                                <p><b><a href="#" title="Claritas est etiam">Claritas est etiam</a></b>
+                                </p>
+                                <p><b>November 15, 2012  |  admin</b>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>tweets<a id="twit" title="" href="https://twitter.com/TheNextWeb">follow</a></h2>
+                                <div class="twitter-list">
+                                    <ul class="tweet_list">
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">Social trading: DCM Dealer uses Twitter and Facebook sentiment to help traders make investment decisions <a href="http://t.co/P8fQcWh5">http://t.co/P8fQcWh5</a> by <a href="http://twitter.com/MartinSFP">@MartinSFP</a></span>
+                                            <div class="hr"></div><span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">The NRA launches a target-practice shooting app on iOS...for ages 4+ <a href="http://t.co/Xuz3vXik">http://t.co/Xuz3vXik</a> by <a href="http://twitter.com/nisummers">@nisummers</a></span> 
+                                            <span class="tweet_time">about 1 hour ago</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-cell">
+                                <h2>Contacts</h2>	
+                                <div class="textwidget">
+                                    <p>The Company Name Inc.
+                                        <br>8901 Marmora Road,
+                                        <br>Glasgow, D04 89GR.</p>
+                                    <p class="footer-last">+1 800 559 6580</p>
+                                    <p class="footer-last">+1 800 603 6035</p>
+                                    <p class="footer-last">
+                                        <a class="e-mail" href="#" title="">mail@companyname.com</a>
+                                    </p>
+                                </div>
+                                <div class="socials">
+                                    <a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
+                                    <a class="twitter" target="_blank" href="http://twitter.com" title=""></a>
+                                    <a class="youtube" target="_blank" href="http://youtube.com" title=""></a>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="copy">&copy; 2012 Novus. All Rights Reserved</div>
+                        <div class="clear"></div>
+                    </div>
+                </footer>
+            </div>
+            <a href="#top" class="gotop" id="top-link"><img src="images/gotop.png" alt="Go Top"/></a>
+            <!--script type="text/javascript" src="javascripts/retina.js"></script-->
+        </div>
+        <script type='text/javascript' src='LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.0.0'></script>
+        <script type='text/javascript' src='LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+        <script type='text/javascript' src='flexslider/jquery.flexslider-min.js?ver=3.4.7'></script>
+    </body>
+</html>
