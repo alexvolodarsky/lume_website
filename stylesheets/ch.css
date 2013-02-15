@@ -67,7 +67,8 @@ a.custom-button,a.button{
 .custom-button.medium,.custom-button.large {
 	margin-top: 20px;}
 .custom-button.small{
-	width: 91px;	height: 32px; margin-bottom: 21px;}
+	width: 91px;	height: 32px; 
+	margin-bottom: 21px;}
 .align-btn-right {float: right;}
 .align-btn-left {float: left;}
 a.custom-button.small{
