@@ -48,6 +48,7 @@ div.header-slider-bar{
 	right: auto;
 	padding-right: 5000px;
 	left: 290px;
+	display: none;
 }
 div#header-slider-intro,
 div#header-slider{

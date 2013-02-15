@@ -63,6 +63,7 @@ input,button,textarea,select,option{
 	font-size: inherit;
 	font-style: inherit;
 	font-weight: inherit;
+	 	padding: 5px 10px;
 }
 input:focus,textarea:focus{
 	outline: none;
@@ -523,7 +524,7 @@ aside nav ul{
 }
 aside nav ul li{
 	padding: 15px 5px;
-	background: url('images/sprite/sprite.png');
+	background: none;
   	background-repeat: repeat-x;
 	background-position:0 -999px;
 }
@@ -552,7 +553,7 @@ aside nav ul li a:hover{
 	background: #e4e7e9;
 }
 .main-cell{
-	width: 190px;
+	width: 100%px;
 	float: left;
 	margin-right: 35px;
 	*margin-right: 23px;
