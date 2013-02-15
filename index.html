@@ -167,12 +167,14 @@
                 <section>
                     <aside><nav>
                             <h2 class="blue">Investor Login</h2>
-
+                            
+                            <p id="loginerror" style="color:red; padding-top: 10px; display:none">Login invalid!</p>
                             <ul>
                                 <li class="page_item"><input type="text" name="fname" placeholder="email" style="background:none"></li>
                                 <li class="page_item" style="padding-top:0px"><input type="text" name="fname" placeholder="password" style="background:none;"></li>
                             </ul>
-                            <a class="small custom-button align-btn-left" title="Nice Button"><span>Login</span></a>
+                            
+                            <a class="small custom-button align-btn-left" title="Nice Button" onclick="$('#loginerror').show()"><span>Login</span></a>
                             
                         </nav></aside>
                     <div class="main">
