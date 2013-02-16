@@ -35,6 +35,7 @@
 .wpb_tab .row-fluid:last-child .wpb_content_element,
 .wpb_accordion .ui-accordion .ui-accordion-content .row-fluid:last-child .wpb_content_element {
   margin-bottom: 0;
+  padding: 0px 20px;
 }
 .wpb_text_column,
 .wpb_tabs,

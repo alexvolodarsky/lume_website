@@ -1327,6 +1327,7 @@ a#twit{
 .page-content h4, .page-content h5, .page-content h6{
 	font-size: 1.167em;
 	font-weight: bold;
+	padding: 0px 20px;
 }
 .page-content h1 {
 	font-size: 4.5em;
