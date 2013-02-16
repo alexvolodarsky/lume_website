@@ -32,6 +32,7 @@
         <script type='text/javascript' src='javascripts/jFlyup.js?ver=3.4.2'></script>
         <script type='text/javascript' src='javascripts/main.js?ver=3.4.2'></script>
         <script type='text/javascript' src='javascripts/jquery.scrollTo-min.js?ver=3.4.2'></script>
+        <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&#038;ver=3.4.2'></script>
         <!-- JAVASCRIPT -->
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
@@ -74,72 +75,18 @@
                 <div id="header">
                     <div id="logo">
                         <a href="index.html">
-                            <img src="http://placehold.it/132x97" alt="Logo">
-                            <h2>Clean Corporate Theme</h2>
+                            <img src="images/lumelogo.png" alt="Logo">
+                            
                         </a>
                     </div>
-                    <nav id="main-nav">
+					<nav id="main-nav">
                         <div id="drop-down-nav">
                             <ul>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="index.html">Home <span></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="Homepage_Example_1.html">Homepage Example 1</a></li>
-                                        <li><a href="Homepage_Example_2.html">Homepage Example 2</a></li>
-                                        <li><a href="Homepage_Example_3.html">Homepage Example 3</a></li>
-                                        <li><a href="Homepage_Example_4.html">Homepage Example 4</a></li>
-                                        <li><a href="Homepage_Example_5.html">Homepage Example 5</a></li>
-                                    </ul>
+                                <li>
+                                    <a class="sub-parent" href="index.html">Home <span></span></a>
                                 </li>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="Blog.html">Blog <span></span></a>
-                                    <ul>
-                                        <li><a href="Blog_Template_1.html">Blog Template 1</a></li>
-                                        <li><a href="Blog_Template_2.html">Blog Template 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="Sliders.html">Sliders <span></span></a>
-                                    <ul>
-                                        <li><a href="Layer_Slider.html">Layer Slider</a></li>
-                                        <li><a href="One_By_One_Slider.html">One By One Slider</a></li>
-                                        <li><a href="Camera_Slider.html">Camera Slider</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="Pages.html">Pages <span></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="Video_Page_Template.html">Video Page Template</a></li>
-                                        <li><a href="Services.html">Services</a></li>
-                                        <li><a href="FAQ.html">FAQ</a></li>
-                                        <li><a href="Our_Team.html">Our Team</a></li>
-                                        <li><a href="Page_with_Left_Sidebar.html">Page with Left Sidebar</a></li>
-                                        <li><a href="Page_with_Right_Sidebar.html">Page with Right Sidebar</a></li>
-                                        <li><a href="Embed_Video.html">Embed Video</a></li>
-                                        <li><a href="Full_Width_Page.html">Full Width Page</a></li>
-                                        <li><a href="Pricing_Page.html">Pricing Page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="Portfolio.html">Portfolio <span></span></a>
-                                    <ul>
-                                        <li><a href="Portfolio_2_Column.html">Portfolio 2 Column</a></li>
-                                        <li><a href="Portfolio_3_Column.html">Portfolio 3 Column</a></li>
-                                        <li><a href="Portfolio_4_Column.html">Portfolio 4 Column</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sub-parent  li_parent" href="Shortcodes.html">Shortcodes <span></span></a>
-                                    <ul>
-                                        <li><a href="Price_Tables.html">Price Tables</a></li>
-                                        <li><a href="Testimonials.html">Testimonials</a></li>
-                                        <li><a href="Columns.html">Columns</a></li>
-                                        <li><a href="Accordion_Tabs.html">Accordion &amp; Tabs</a></li>
-                                        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
-                                    </ul>
-                                </li>
+                                <li><a class="sub-parent " href="Services.html">Our Solution <span></span></a></li>
+ 								<li><a class="sub-parent " href="Contacts.html">Our Team <span></span></a></li>
                                 <li><a class="sub-parent " href="Contacts.html">Contacts <span></span></a></li>
                             </ul>
                         </div>
@@ -151,26 +98,49 @@
                 <div id="breadcrumb-bar-wide">
 					<div id="breadcrumb-bar" class="contact">
 						<div id="breadcrumb"><a href="#">Home</a> <b>&gt;</b> <span class="current"> Contacts</span></div>
-						<div class="socials">
-							<a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
-							<a class="twitter" target="_blank" href="http://twitter.com" title=""></a>					
-							<a class="youtube" target="_blank" href="http://youtube.com" title=""></a>				
-						</div>
 					</div>
                 </div>
                 <div class="clear"></div>
                 <div id="header-map">
                     <div class="googleMapContainer">
-                        <img src="http://placehold.it/1980x402" alt="">
+                    
+                    <div style="width:1200px;">
+                    	<div class="wpgmappity_container" id="wpgmappity-map-8" style="width:1200px;height:402px;"></div>
+                    </div>
+                    <script type="text/javascript">
+						function wpgmappity_maps_loaded8() {
+						var latlng = new google.maps.LatLng(40.76,-73.973509);
+						var options = {
+						  center : latlng,
+						  scrollwheel :  true,
+						  mapTypeId: google.maps.MapTypeId.ROADMAP,
+						  zoomControl : false,
+						  mapTypeControl : false,
+						  scaleControl : false,
+						  streetViewControl : false,
+						  panControl : false,  zoom : 12
+						};
+						var wpgmappitymap8 = new google.maps.Map(document.getElementById('wpgmappity-map-8'), options);
+						var point0 = new google.maps.LatLng(40.76,-73.973509);
+						var marker8_0 = new google.maps.Marker({
+						  position : point0,
+						  map : wpgmappitymap8
+						  });
+						}
+						jQuery(window).load(function() {
+						  wpgmappity_maps_loaded8();
+						});
+					</script>		
+                    
                     </div>
 					<div id="contact-info-wide">
 						<div id="contact-info">
-							<div id="address-info"><h3>CONTACT INFO</h3><p>The Company Name Inc. 8 Northumberland Ave, London, Greater London WC2N 5BY</p></div>
-							<ul>
+							<div id="address-info"><h3>CONTACT INFO</h3><p>Lume Energy LLC. <br />527 Madison Aves <br />New York, NY 10022</p></div>
+							<!-- <ul>
 								<li>Telephone: +1 800 559 6580</li>
 								<li>Fax: +1 800 559 6580</li>
 								<li><a href="mailto:mail@companyname.com">mail@companyname.com</a></li>
-							</ul>				
+							</ul> -->		
 						</div>
                     </div>
                 </div>
@@ -178,49 +148,7 @@
             <div role="main">
                 <section>
                     <aside>
-                        <nav>
-                            <h3 class="widget-title">Careers</h3>			
-                            <div class="textwidget">
-                                <div class="clear"></div>
-                                <div class="accordion">
-                                    <ul>
-                                        <li class="">
-                                            <a href="" class="acc-title">Vestibulum eu ligula lorem.<span class="acc-icon"></span></a>
-                                            <div class="sub-menu">
-                                                <ul>
-                                                    <li>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien..</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="" class="acc-title">Sed fermentum velit vel<span class="acc-icon"></span></a>
-                                            <div class="sub-menu">
-                                                <ul>
-                                                    <li>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien..</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="" class="acc-title">Suspendisse rhoncus facilisis<span class="acc-icon"></span></a>
-                                            <div class="sub-menu">
-                                                <ul>
-                                                    <li>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien..</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="" class="acc-title">Vestibulum eu ligula lorem.<span class="acc-icon"></span></a>
-                                            <div class="sub-menu">
-                                                <ul>
-                                                    <li>Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien..</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </nav>
+                    
                     </aside>
                     <div class="main">
                         <div class="post-form contact-form">
@@ -251,70 +179,7 @@
                     <div class="clear"></div>
                 </section>
             </div>
-            <div>
-                <div class="footer"></div>
-                <div class="clear"></div>
-                <footer>
-                    <div class="footer">
-                        <div id="logo-bottom">
-                            <div class="textwidget">
-                                <img src="http://placehold.it/144x153" alt="Logo">
-                            </div>
-                        </div>
-                        <div id="footer-container">
-                            <div class="footer-cell">
-                                <h2>Latest Posts</h2> 
-                                <p><b><a href="#" title="Mirum est notare">Mirum est notare</a></b>
-                                </p>
-                                <p><b>November 18, 2012  |  admin</b>
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
-                                <div class="hr"></div>
-                                <p><b><a href="#" title="Claritas est etiam">Claritas est etiam</a></b>
-                                </p>
-                                <p><b>November 15, 2012  |  admin</b>
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique...</p>
-                            </div>
-                            <div class="footer-cell">
-                                <h2>tweets<a id="twit" title="" href="https://twitter.com/TheNextWeb">follow</a></h2>
-                                <div class="twitter-list">
-                                    <ul class="tweet_list">
-                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">Social trading: DCM Dealer uses Twitter and Facebook sentiment to help traders make investment decisions <a href="http://t.co/P8fQcWh5">http://t.co/P8fQcWh5</a> by <a href="http://twitter.com/MartinSFP">@MartinSFP</a></span>
-                                            <div class="hr"></div><span class="tweet_time">about 1 hour ago</span>
-                                        </li>
-                                        <li class="latest-twitter-tweet tweet_first"><span class="latest-twitter-tweet-time tweet_text">The NRA launches a target-practice shooting app on iOS...for ages 4+ <a href="http://t.co/Xuz3vXik">http://t.co/Xuz3vXik</a> by <a href="http://twitter.com/nisummers">@nisummers</a></span> 
-                                            <span class="tweet_time">about 1 hour ago</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="footer-cell">
-                                <h2>Contacts</h2>	
-                                <div class="textwidget">
-                                    <p>The Company Name Inc.
-                                        <br>8901 Marmora Road,
-                                        <br>Glasgow, D04 89GR.</p>
-                                    <p class="footer-last">+1 800 559 6580</p>
-                                    <p class="footer-last">+1 800 603 6035</p>
-                                    <p class="footer-last">
-                                        <a class="e-mail" href="#" title="">mail@companyname.com</a>
-                                    </p>
-                                </div>
-                                <div class="socials">
-                                    <a class="facebook" target="_blank" href="http://facebook.com" title=""></a>
-                                    <a class="twitter" target="_blank" href="http://twitter.com" title=""></a>
-                                    <a class="youtube" target="_blank" href="http://youtube.com" title=""></a>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div id="copy">&copy; 2012 Novus. All Rights Reserved</div>
-                        <div class="clear"></div>
-                    </div>
-                </footer>
-            </div>
-            <a href="#top" class="gotop" id="top-link"><img src="images/gotop.png" alt="Go Top"/></a>
+
             <!--script type="text/javascript" src="javascripts/retina.js"></script-->
         </div>
         <script type='text/javascript' src='LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.0.0'></script>
