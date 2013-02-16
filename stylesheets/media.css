@@ -2281,6 +2281,8 @@ select.mobile-navigation, select.mobile-navigation option {
 	text-transform: uppercase;
 	border-bottom: solid 1px #eaeeca;
 	margin-bottom: 20px !important;*/
+;
+	text-align: center;
 }
 #destroy, hr {
 	display: none;
