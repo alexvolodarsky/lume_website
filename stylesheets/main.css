@@ -220,6 +220,8 @@ header{
 	-moz-transition: 0.25s ease all;
 	-o-transition: 0.25s ease all;
 	transition: 0.25s ease all;
+	display: none;
+	display: none;
 }
 #breadcrumb a:hover{
 	color: #3781b7;
